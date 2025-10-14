@@ -1,0 +1,28 @@
+/** 
+NOT: !
+nullish coalescing  operator: ??
+*/
+
+console.log(true || true || false ); // true
+console.log(true || false); // true);
+console.log(false || false); // false
+console.log(false || true); // true
+
+console.log(true && true); // true
+console.log(true && false);
+console.log(false && false); // false -short circuit evaluation
+console.log(false && true); // false -short circuit evaluation
+
+const age = 16;
+const passDMVExam = true;
+const getDriversLicense = age >= 16 && passDMVExam;
+console.log(getDriversLicense);
+
+// nullish coalescing operator: ??
+// provide a default value if the operand before the ?? is false
+// return the right hand side value if the left-hand value is null or undefined
+
+let user = null;
+const username = user ?? 'default user';
+const dummyUsername = (user != null && user != undefined) ? a : 'default user';
+comsole.log(`username: ${username}`);
